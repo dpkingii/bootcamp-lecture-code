@@ -1,0 +1,12 @@
+#clicker {
+  width: 200px;
+  cursor: pointer;
+  transition: transform 0.1s;
+}
+
+#clicker:hover {
+  transform: scale(1.05);
+}
+#clicker:active {
+  transform: scale(0.95);
+}
