@@ -1,0 +1,187 @@
+@import url("https://fonts.googleapis.com/css2?family=Lora:ital,wght@0,400;0,500;1,400&family=Source+Sans+3:wght@400;500&display=swap");
+
+*,
+*::before,
+*::after {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}
+
+body {
+  font-family: "Source Sans 3", sans-serif;
+  background-color: #f5efe6;
+  background-image: radial-gradient(#e8d9c4 1px, transparent 1px);
+  background-size: 24px 24px;
+  color: #3b2f20;
+  min-height: 100vh;
+  display: flex;
+  justify-content: center;
+  align-items: flex-start;
+  padding: 3rem 2rem;
+}
+
+.app {
+  width: 100%;
+  max-width: 860px;
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 2.5rem;
+  align-items: start;
+}
+
+/* Left column */
+.col-left {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+.col-left .score-card {
+  width: 100%;
+}
+
+/* Right column */
+.col-right {
+  padding-top: 0.25rem;
+}
+
+/* Responsive: stack on small screens */
+@media (max-width: 620px) {
+  .app {
+    grid-template-columns: 1fr;
+    max-width: 420px;
+  }
+}
+
+/* Score card */
+.score-card {
+  background: #fffaf4;
+  border: 1px solid #e2d0b8;
+  border-radius: 16px;
+  padding: 1.1rem 1.4rem;
+  margin-bottom: 1.5rem;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+.score-label {
+  font-family: "Lora", serif;
+  font-style: italic;
+  font-size: 13px;
+  color: #9c7f5e;
+  margin-bottom: 4px;
+}
+.score-value {
+  font-family: "Lora", serif;
+  font-size: 30px;
+  font-weight: 500;
+  color: #3b2f20;
+}
+.score-sub {
+  font-size: 13px;
+  color: #9c7f5e;
+  margin-top: 2px;
+}
+
+/* Cookie button */
+.cookie-btn {
+  display: block;
+  margin: 0 auto 1.75rem;
+  width: 160px;
+  height: 160px;
+  border-radius: 50%;
+  border: 1.5px solid #e2d0b8;
+  background: #fffaf4;
+  font-size: 86px;
+  cursor: pointer;
+  transition:
+    transform 80ms,
+    box-shadow 80ms;
+  line-height: 1;
+  box-shadow: 0 2px 8px rgba(120, 80, 30, 0.08);
+}
+.cookie-btn:hover {
+  box-shadow: 0 4px 16px rgba(120, 80, 30, 0.14);
+}
+.cookie-btn:active {
+  transform: scale(0.91);
+  box-shadow: none;
+}
+
+/* Section label */
+.section-label {
+  font-family: "Lora", serif;
+  font-style: italic;
+  font-size: 13px;
+  color: #9c7f5e;
+  margin-bottom: 10px;
+}
+
+/* Upgrade cards */
+.upgrade-card {
+  background: #fffaf4;
+  border: 1px solid #e2d0b8;
+  border-radius: 12px;
+  padding: 14px 16px;
+  margin-bottom: 10px;
+  display: flex;
+  align-items: center;
+  gap: 12px;
+}
+.upgrade-info {
+  flex: 1;
+}
+.upgrade-name {
+  font-family: "Lora", serif;
+  font-size: 15px;
+  font-weight: 500;
+  color: #3b2f20;
+}
+.upgrade-desc {
+  font-size: 13px;
+  color: #9c7f5e;
+  margin-top: 3px;
+}
+
+.upgrade-btn {
+  padding: 7px 15px;
+  border-radius: 20px;
+  border: 1px solid #d4b896;
+  background: transparent;
+  font-family: "Source Sans 3", sans-serif;
+  font-size: 13px;
+  font-weight: 500;
+  color: #7a5230;
+  cursor: pointer;
+  white-space: nowrap;
+  transition: background 100ms;
+}
+.upgrade-btn:not(:disabled):hover {
+  background: #f5e9d8;
+}
+.upgrade-btn:disabled {
+  opacity: 0.35;
+  cursor: not-allowed;
+}
+.upgrade-btn.owned {
+  background: #eef5e8;
+  color: #4e7a34;
+  border-color: #c2dba8;
+  cursor: default;
+}
+
+/* Milestone toast */
+.milestone {
+  background: #fef6e4;
+  color: #7a5230;
+  border: 1px solid #f0d9a8;
+  border-radius: 12px;
+  padding: 10px 14px;
+  font-family: "Lora", serif;
+  font-style: italic;
+  font-size: 13px;
+  margin-bottom: 1.5rem;
+  text-align: center;
+  width: 100%;
+}
